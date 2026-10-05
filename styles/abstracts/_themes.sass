@@ -1,0 +1,11 @@
+@use '../abstracts/_tokens' as tok
+@use '../abstracts/_mixins' as mixin
+
+:root
+  @include mixin.apply-theme(tok.$light)
+
+[data-theme="light"]
+  @include mixin.apply-theme(tok.$light)
+
+[data-theme="dark"]
+  @include mixin.apply-theme(tok.$dark)

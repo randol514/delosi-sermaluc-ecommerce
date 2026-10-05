@@ -1,0 +1,29 @@
+.cart-summary
+  background-color: var(--bg-main)
+  border: 1px solid var(--color-secondary)
+  border-radius: 20px
+  overflow: hidden
+  padding: 30px 20px
+  box-sizing: border-box
+  font-family: var(--font-primary)
+
+.cart-summary__list-item
+  display: flex
+  justify-content: space-between
+  color: var(--color-primary)
+  font-size: 15px
+  margin-bottom: 15px
+  &:last-child
+    margin-bottom: 0
+  > span, strong
+    margin: 0
+    padding: 0 15px
+    box-sizing: border-box
+  > strong
+    font-weight: var(--fw-bold)
+    font-size: 18px
+
+.cart-summary__none
+  font-weight: var(--fw-regular)
+  color: var(--color-primary)
+  font-size: 15px

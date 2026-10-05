@@ -1,0 +1,42 @@
+@use '../abstracts/_mixins' as mixin
+
+*
+  transition: var(--transition)
+
+html
+  background-color: var(--bg-base)
+
+.site-wrapper
+  background-color: var(--bg-base)
+  position: relative
+  overflow: hidden
+  padding: 0
+  padding-bottom: 0
+  box-sizing: border-box
+  position: relative
+  z-index: 2
+
+//page
+.site-page
+  padding-top: 120px
+  padding-bottom: 80px
+
+.site-page__title
+  margin-bottom: 50px
+  text-align: center
+
+@include mixin.media(lg)
+  .site-page
+    padding-top: 65px
+    padding-bottom: 65px
+
+  .site-page__title
+    margin-bottom: 40px
+
+@include mixin.media(sm)
+  .site-page
+    padding-top: 55px
+    padding-bottom: 55px
+
+  .site-page__title
+    margin-bottom: 30px

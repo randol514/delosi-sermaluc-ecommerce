@@ -1,0 +1,23 @@
+@use '../../../../styles/abstracts/_mixins' as mixin
+
+.product-catalog
+  padding: 80px 0
+
+.product-catalog__content
+  display: flex
+  flex-direction: column
+  gap: 40px
+
+.product-catalog__filters
+  display: flex
+  justify-content: space-between
+  aign-items: center
+
+@include mixin.media(lg)
+  .product-catalog__filters
+    flex-direction: column
+    gap: 20px
+
+@include mixin.media(sm)
+  .product-catalog
+    padding: 55px 0

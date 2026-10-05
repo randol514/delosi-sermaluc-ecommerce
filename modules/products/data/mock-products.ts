@@ -1,0 +1,58 @@
+import type { Product } from "@/modules/products/types/product";
+
+export const mockProducts: Product[] = [
+  {
+    id: 1,
+    title: "Auriculares inalámbricos",
+    price: 49.99,
+    description: "Auriculares inalámbricos para escuchar música a diario.",
+    category: "electronics",
+    image: "/products/product-placeholder.svg",
+    rating: { rate: 4.2, count: 120 },
+  },
+  {
+    id: 2,
+    title: "Anillo de plata",
+    price: 29.99,
+    description: "Una pieza sencilla para complementar tu estilo.",
+    category: "jewelery",
+    image: "/products/product-placeholder.svg",
+    rating: { rate: 4.5, count: 86 },
+  },
+  {
+    id: 3,
+    title: "Chaqueta casual",
+    price: 59.99,
+    description: "Chaqueta ligera de uso diario.",
+    category: "men's clothing",
+    image: "/products/product-placeholder.svg",
+    rating: { rate: 4.0, count: 54 },
+  },
+  {
+    id: 4,
+    title: "Bolso de hombro",
+    price: 39.99,
+    description: "Bolso compacto para llevar tus esenciales.",
+    category: "women's clothing",
+    image: "/products/product-placeholder.svg",
+    rating: { rate: 4.7, count: 210 },
+  },
+  {
+    id: 5,
+    title: "Bolso de hombro",
+    price: 49.99,
+    description: "Bolso compacto para llevar tus esenciales.",
+    category: "women's clothing",
+    image: "/products/product-placeholder.svg",
+    rating: { rate: 4.7, count: 210 },
+  },
+  {
+    id: 6,
+    title: "Bolso de hombro",
+    price: 39.99,
+    description: "Bolso compacto para llevar tus esenciales.",
+    category: "women's clothing",
+    image: "/products/product-placeholder.svg",
+    rating: { rate: 4.3, count: 400 },
+  },
+];

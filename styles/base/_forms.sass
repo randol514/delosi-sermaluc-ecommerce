@@ -1,0 +1,41 @@
+@use '../abstracts/_mixins' as mixin
+
+.site-form
+  width: 100%
+  margin: 0
+  padding: 0
+
+.site-form__rows
+  margin: 0
+  padding: 0
+
+.site-form__row
+  display: grid
+  gap: 25px
+  margin-bottom: 25px
+  &:last-child
+    margin-bottom: 0
+
+//columns
+.site-form__row
+  &.site-form__row--one
+    @include mixin.grid-columns(1)
+  &.site-form__row--two
+    @include mixin.grid-columns(2)
+  &.site-form__row--three
+    @include mixin.grid-columns(3)
+
+@include mixin.media(lg)
+  .site-form__row
+    &.site-form__row--three
+      @include mixin.grid-columns(2)
+
+@include mixin.media(md)
+  .site-form__row
+    &.site-form__row--two
+      @include mixin.grid-columns(1)
+    &.site-form__row--three
+      @include mixin.grid-columns(1)
+
+.site-form__button
+  margin-top: 25px

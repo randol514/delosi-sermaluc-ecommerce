@@ -1,0 +1,14 @@
+@use '../../../../styles/abstracts/_mixins' as mixin
+
+.product-list
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  gap: 30px
+
+@include mixin.media(lg)
+  .product-list
+    grid-template-columns: repeat(2, 1fr)
+
+@include mixin.media(sm)
+  .product-list
+    grid-template-columns: repeat(1, 1fr)

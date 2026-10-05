@@ -1,0 +1,84 @@
+@use '../../../styles/abstracts/_mixins' as mixin
+
+.field
+  text-align: left
+  position: relative
+
+.field__input
+  width: 100%
+  height: 45px
+  line-height: 45px
+  border: none
+  margin: 0
+  padding: 0
+  border-radius: 0
+  background: none
+  background-color: var(--field-bg)
+  border: 1px solid var(--field-border)
+  font-family: var(--font-primary)
+  font-weight: var(--fw-regular)
+  color: var(--field-text)
+  font-size: 16px
+  padding: 0 12px
+  box-sizing: border-box
+
+.field--inline
+  display: flex
+  align-items: center
+  gap: 15px
+  .field__label
+    margin-bottom: 0
+    white-space: nowrap
+  .field__inside
+    flex: 1
+
+.field__inside
+  position: relative
+
+.field__label
+  margin: 0
+  display: block
+  cursor: pointer
+  font-family: var(--font-primary)
+  font-weight: var(--fw-regular)
+  color: var(--text-primary)
+  font-size: 16px
+  margin-bottom: var(--spacing-sm)
+
+.field__icon
+  position: absolute
+  top: 0
+  height: 45px
+  display: inline-flex
+  align-items: center
+  z-index: 2
+  font-size: 14px
+  color: var(--text-primary)
+  pointer-events: none
+
+//Select
+.field--select
+  .field__input
+    padding-right: 35px
+    appearance: none
+    cursor: pointer
+    &::-ms-expand
+      display: none
+  .field__icon
+    right: 15px
+
+//states
+.field
+  &--focus .field__input,
+  .field__input:focus-visible
+    border: 1px solid var(--field-border-focus)
+  &--filled
+    .field__input
+      border: 1px solid var(--field-border-filled)
+  &--success
+    .field__input
+      border: 1px solid var(--field-border-success)
+  &--disabled .field__input,
+  .field__input:disabled
+    opacity: 0.6
+    cursor: not-allowed

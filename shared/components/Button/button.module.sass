@@ -1,0 +1,104 @@
+@use '../../../styles/abstracts/_mixins' as mixin
+
+.site-btn
+  @include mixin.empty
+  position: relative
+  overflow: hidden
+  z-index: 3
+  display: inline-block
+  box-sizing: border-box
+  cursor: pointer
+  transition: var(--transition)
+  height: 50px
+  line-height: 50px
+  &:disabled
+    opacity: 0.6
+    cursor: not-allowed
+
+.site-btn--small
+  height: 45px
+  line-height: 45px
+
+.site-btn--medium
+  height: 50px
+  line-height: 50px
+
+.site-btn--big
+  height: 55px
+  line-height: 55px
+
+.site-btn--rounded
+  border-radius: 8px
+  .site-btn__inside
+    border-radius: 8px
+
+.site-btn__icon
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  transition: var(--transition)
+
+.site-btn__inside
+  height: 100%
+  position: relative
+  z-index: 2
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 0 30px
+  box-sizing: border-box
+  width: 100%
+  transition: var(--transition)
+
+.site-btn--icon-right
+  .site-btn__icon
+    margin-left: var(--spacing-sm)
+
+.site-btn--icon-left
+  .site-btn__icon
+    margin-right: var(--spacing-sm)
+
+.site-btn--primary
+  background-color: var(--btn-primary-bg)
+  border: 1px solid var(--btn-primary-border)
+  .site-btn__inside
+    font-family: var(--font-primary)
+    font-weight: var(--fw-regular)
+    color: var(--btn-primary-text)
+    font-size: 16px
+  .site-btn__icon
+    color: var(--btn-primary-text)
+  &:hover:not(:disabled)
+    background-color: var(--btn-primary-bg-hover)
+    border: 1px solid var(--btn-primary-border-hover)
+    .site-btn__inside
+      color: var(--btn-primary-text-hover)
+    .site-btn__icon
+      color: var(--btn-primary-text-hover)
+
+.site-btn--secondary
+  background-color: var(--btn-secondary-bg)
+  border: 1px solid var(--btn-secondary-border)
+  .site-btn__inside
+    font-family: var(--font-primary)
+    font-weight: var(--fw-regular)
+    color: var(--btn-secondary-text)
+    font-size: 16px
+  .site-btn__icon
+    color: var(--btn-secondary-text)
+  &:hover:not(:disabled)
+    background-color: var(--btn-secondary-bg-hover)
+    border: 1px solid var(--btn-secondary-border-hover)
+    .site-btn__inside
+      color: var(--btn-secondary-text-hover)
+    .site-btn__icon
+      color: var(--btn-secondary-text-hover)
+
+@include mixin.media(sm)
+  .site-btn--medium
+    height: 50px
+    line-height: 50px
+
+  .site-btn--big
+    height: 50px
+    line-height: 50px
