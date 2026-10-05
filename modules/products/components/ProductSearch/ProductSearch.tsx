@@ -1,5 +1,4 @@
 import type { ChangeEvent } from "react";
-import "./product-search.sass";
 import { Field } from "@/shared/components/Field";
 
 interface ProductSearchProps {

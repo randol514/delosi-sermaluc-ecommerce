@@ -15,7 +15,7 @@ type ProductImageProps = {
   className?: string;
 };
 
-export function ProductImage({
+export const ProductImage = ({
   src,
   alt,
   width,
@@ -23,7 +23,7 @@ export function ProductImage({
   sizes,
   priority = false,
   className,
-}: ProductImageProps) {
+}: ProductImageProps) => {
   const [failedSource, setFailedSource] = useState<string | null>(null);
   const imageSource = failedSource === src ? FALLBACK_IMAGE : src;
 
@@ -39,4 +39,4 @@ export function ProductImage({
       onError={() => setFailedSource(src)}
     />
   );
-}
+};

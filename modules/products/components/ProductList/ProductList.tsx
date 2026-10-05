@@ -14,7 +14,9 @@ export const ProductList = ({ products }: ProductListProps) => {
           <ProductCard key={product.id} product={product} />
         ))
       ) : (
-        <p>No hay productos en esta categoría.</p>
+        <div className="product-list__message">
+          <p>No hay productos en esta categoría.</p>
+        </div>
       )}
     </div>
   );
